@@ -2,24 +2,42 @@
   "name": "solitaire",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "main": "./electron/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "concurrently": "^5.2.0",
-    "electron": "^9.1.0",
-    "electron-builder": "^22.7.0",
     "electron-is-dev": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "wait-on": "^5.1.0"
   },
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
+  },
+  "build": {
+    "appId": "com.andydavisson.solitaire",
+    "extends": null,
+    "productName": "Solitaire",
+    "files": [
+      "./build/**/*",
+      "./electron/main.js"
+    ],
+    "mac": {
+      "category": "games"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ebuild": "npm run build && electron-builder",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
