@@ -1,5 +1,6 @@
 const electron = require('electron')
 const { app, BrowserWindow } = require('electron')
+const isDev = require('electron-is-dev')
 
 const path = require('path')
 
@@ -12,7 +13,7 @@ const createWindow = () => {
 
   mainWindow.loadURL(startURL)
 
-  mainWindow.once('ready-to-show', () => mainWindows.show())
+  mainWindow.once('ready-to-show', () => mainWindow.show())
   mainWindow.on('closed', () => {
     mainWindow = null
   })
