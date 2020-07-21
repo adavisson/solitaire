@@ -52,6 +52,7 @@
 }
 
 .card-front {
+  border-radius: .5em;
   background: white;
   width: 100%;
   height: 100%;
