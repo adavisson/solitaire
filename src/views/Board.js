@@ -4,7 +4,7 @@ import Card from '../components/Card'
 const Board = () => {
   return (
     <div className="board">
-      <Card value="3" suit="spades"/>
+      <Card value="3" suit="spades" />
     </div>
   );
 }
