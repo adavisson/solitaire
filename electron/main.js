@@ -7,7 +7,7 @@ const path = require('path')
 let mainWindow //Global window object
 
 const createWindow = () => {
-  mainWindow = new BrowserWindow({height: 600, width: 800, show: false})
+  mainWindow = new BrowserWindow({height: 900, width: 1200, show: false})
 
   const startURL = isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`
 
