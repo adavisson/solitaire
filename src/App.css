@@ -44,6 +44,7 @@
 }
 
 .card {
+  position: absolute;
   height: 10.00em;
   width: 7.5em;
   border-radius: .5em;
@@ -63,4 +64,25 @@
   position: absolute;
   left: .75em;
   top: 1em; 
+}
+
+.top-index {
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: .25em;
+  top: .25em;
+}
+
+.bottom-index {
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  right: .25em;
+  bottom: .25em;
+  transform: rotate(180deg);
+}
+
+.red {
+  color: red;
 }

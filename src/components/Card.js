@@ -11,7 +11,15 @@ const Card = () => {
     <div className='card' onClick={flip}>
       {!facedown && (
         <div className='card-front'>
-          <div className="card-center">&spades;</div>
+          <div className='top-index'>
+            3<br />
+            &spades;
+          </div>
+          <div className='card-center'>&spades;</div>
+          <div className='bottom-index'>
+            3<br />
+            &spades;
+          </div>
         </div>
       )}
     </div>
