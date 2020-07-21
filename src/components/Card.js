@@ -25,7 +25,7 @@ const Card = (props) => {
   }
 
   return (
-    <div className='card' onClick={flip}>
+    <div draggable className='card' onClick={flip}>
       {!facedown && (
         <div className={props.suit === 'diamonds' || props.suit === 'hearts' ? 'card-front red' : 'card-front'}>
           <div className='top-index'>
