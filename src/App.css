@@ -38,6 +38,7 @@
 }
 
 .board {
+  position: absolute;
   background-color: green;
   width: 100vw;
   height: 100vh;
@@ -50,6 +51,11 @@
   border-radius: .5em;
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  cursor: grab;
+}
+
+.card:active, .card-front:active{
+  cursor: grabbing;
 }
 
 .card-front {
