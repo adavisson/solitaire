@@ -72,29 +72,15 @@ const Draggable = (props) => {
   }
 
   return (  
-    <Container
+    <div
         onMouseDown={handleMouseDown}
         x={translateX}
         y={translateY}
         isDragging={isDragging}
       >
         {children}
-      </Container>
+      </div>
   );
 }
-
-const Container = styled.div.attrs({
-  style: ({ x, y }) => ({
-    transform: `translate(${x}px, ${y}px)`
-  }),
-})`
-  cursor: grab;
-  
-  ${({ isDragging }) =>
-  isDragging && css`
-    opacity: 0.8;
-    cursor: grabbing;
-  `};
-`;
  
 export default Draggable;
