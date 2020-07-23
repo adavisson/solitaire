@@ -1,14 +1,15 @@
 import React from 'react'
 import Card from '../components/Card'
-import Draggable from '../components/Draggable'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 const Board = () => {
   return (
-    <div className='board'>
-      <Draggable>
+    <DndProvider backend={HTML5Backend}>
+      <div className='board'>
         <Card className='drag' value='3' suit='spades' />
-      </Draggable>
-    </div>
+      </div>
+    </DndProvider>
   )
 }
 

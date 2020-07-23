@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react'
+import { useDrag } from 'react-dnd'
+import { ItemTypes } from '../Constants'
 
 const Card = (props) => {
   const [facedown, setFacedown] = useState(false)
   const [suit, setSuit] = useState('')
+
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: ItemTypes.CARD },
+    collect: monitor => ({
+      isDragging: !!monitor.isDragging()
+    })
+  })
 
   useEffect(() => {
     switch(props.suit) {
@@ -25,7 +34,7 @@ const Card = (props) => {
   }
 
   return (
-    <div draggable className='card' onClick={flip}>
+    <div ref={drag} className='card' onClick={flip}>
       {!facedown && (
         <div className={props.suit === 'diamonds' || props.suit === 'hearts' ? 'card-front red' : 'card-front'}>
           <div className='top-index'>

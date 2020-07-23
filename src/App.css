@@ -38,7 +38,7 @@
 }
 
 .board {
-  position: absolute;
+  position: flex;
   background-color: green;
   width: 100vw;
   height: 100vh;
