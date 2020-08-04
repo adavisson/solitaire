@@ -38,7 +38,7 @@
 }
 
 .board {
-  position: flex;
+  display: flex;
   background-color: green;
   width: 100vw;
   height: 100vh;
@@ -91,4 +91,11 @@
 
 .red {
   color: red;
+}
+
+.space {
+  height: 10.00em;
+  width: 7.5em;
+  border-radius: .5em;
+  background-color: darkgreen;
 }
