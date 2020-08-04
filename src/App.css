@@ -38,7 +38,7 @@
 }
 
 .board {
-  display: flex;
+  position: absolute;
   background-color: green;
   width: 100vw;
   height: 100vh;
@@ -94,6 +94,7 @@
 }
 
 .space {
+  position: absolute;
   height: 10.00em;
   width: 7.5em;
   border-radius: .5em;
