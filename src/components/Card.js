@@ -5,6 +5,7 @@ import { ItemTypes } from '../Constants'
 const Card = (props) => {
   const [facedown, setFacedown] = useState(false)
   const [suit, setSuit] = useState('')
+  const [position, setPosition] = useState(0)
 
   const [{ isDragging }, drag] = useDrag({
     item: { type: ItemTypes.CARD },
